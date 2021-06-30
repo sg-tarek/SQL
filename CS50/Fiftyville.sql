@@ -1,5 +1,5 @@
 /*
-The task in Fiftyville is to solve a mystery!
+The task in problemset Fiftyville is to solve a mystery!
 
 The CS50 Duck has been stolen! The town of Fiftyville has called upon you to solve the mystery of the stolen duck. 
 Authorities believe that the thief stole the duck and then, shortly afterwards, took a flight out of town with the help of an accomplice. 
@@ -110,6 +110,7 @@ SELECT person_id FROM bank_accounts
 WHERE account_number IN (SELECT account_number FROM atm_transactions
 WHERE year = 2020 AND month = 7 AND day = 28 AND atm_location = "Fifer Street" AND transaction_type = "withdraw");
 
+-- Given the above information we can use it to get information on the person who made the transaction:
 SELECT name, license_plate, phone_number FROM people
 WHERE id IN (SELECT person_id FROM bank_accounts
 WHERE account_number IN (SELECT account_number FROM atm_transactions
